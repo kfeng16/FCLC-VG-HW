@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://daw2y2cr3ul4h"]
+
+[ext_resource type="Texture2D" uid="uid://bwv48dvb8nle5" path="res://icon.svg" id="1_ks400"]
+[ext_resource type="Script" path="res://Iconifelsedemo.gd" id="2_gj6yf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(198, 170)
+scale = Vector2(1.78125, 1.8125)
+texture = ExtResource("1_ks400")
+script = ExtResource("2_gj6yf")
+health = null
+booleanVar = null
