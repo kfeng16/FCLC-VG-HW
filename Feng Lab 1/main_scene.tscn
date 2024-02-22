@@ -8,13 +8,18 @@
 
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0.968627, 0, 0.423529, 1)
-position = Vector2(842, -279)
+position = Vector2(846, -244)
 texture = ExtResource("1_4ifc2")
 
 [node name="60JellyDishCopy" type="Sprite2D" parent="."]
 modulate = Color(0.701961, 0.611765, 0.980392, 1)
-position = Vector2(-358, 371)
+position = Vector2(-369, 355)
 scale = Vector2(21.9062, 23.875)
+texture = ExtResource("2_5eog6")
+
+[node name="60JellyDishCopy2" type="Sprite2D" parent="60JellyDishCopy"]
+modulate = Color(0.701961, 0.611765, 0.980392, 1)
+position = Vector2(-32.8217, 0.837696)
 texture = ExtResource("2_5eog6")
 
 [node name="Node" type="Node" parent="."]

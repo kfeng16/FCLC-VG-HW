@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccgdowb7yvsym"]
+
+[ext_resource type="Texture2D" uid="uid://ciystjfugnmuf" path="res://icon.svg" id="1_0vfbn"]
+[ext_resource type="Script" path="res://Character.gd" id="2_fgq13"]
+[ext_resource type="PackedScene" uid="uid://dxwbt04f3uk6c" path="res://Tree.tscn" id="2_m8unk"]
+[ext_resource type="Script" path="res://Chile.gd" id="3_aj465"]
+[ext_resource type="Script" path="res://liltree.gd" id="5_6ae28"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(473, 392)
+scale = Vector2(4.35938, 4.3125)
+texture = ExtResource("1_0vfbn")
+script = ExtResource("2_fgq13")
+
+[node name="Chile" type="Sprite2D" parent="Character"]
+self_modulate = Color(0.133333, 0.886275, 0.596078, 1)
+position = Vector2(116.76, 24.8116)
+scale = Vector2(0.609319, 0.576087)
+texture = ExtResource("1_0vfbn")
+script = ExtResource("3_aj465")
+
+[node name="lil tree" parent="." instance=ExtResource("2_m8unk")]
+position = Vector2(461, -32)
+scale = Vector2(2, 2)
+script = ExtResource("5_6ae28")
+
+[node name="big tree" parent="lil tree" instance=ExtResource("2_m8unk")]
+position = Vector2(-201.5, 80)
+scale = Vector2(2, 2)
+
+[node name="bigger tree" parent="lil tree" instance=ExtResource("2_m8unk")]
+position = Vector2(229, 50.5)
+scale = Vector2(2, 2)

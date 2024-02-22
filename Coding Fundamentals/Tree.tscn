@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxwbt04f3uk6c"]
+
+[ext_resource type="Script" path="res://Tree.gd" id="1_6yltu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = -13.0
+offset_right = 22.0
+offset_bottom = 62.0
+color = Color(0.666667, 0.784314, 0, 1)
+script = ExtResource("1_6yltu")
+speed = 4
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = -42.0
+offset_top = -48.0
+offset_right = 83.0
+offset_bottom = 28.0
+color = Color(0.796078, 0.92549, 0.764706, 1)
