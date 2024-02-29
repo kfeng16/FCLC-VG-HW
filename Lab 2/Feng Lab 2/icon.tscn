@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4dpkmpnl5dg6"]
+
+[ext_resource type="Texture2D" uid="uid://bwv48dvb8nle5" path="res://icon.svg" id="1_psvpd"]
+[ext_resource type="Script" path="res://Feng Lab 2/new_gd_script.gd" id="2_muir7"]
+[ext_resource type="PackedScene" uid="uid://daw2y2cr3ul4h" path="res://Lab 2.tscn" id="3_nf2m4"]
+
+[node name="Icon" type="Sprite2D"]
+position = Vector2(546, 298)
+scale = Vector2(2.9375, 3.125)
+texture = ExtResource("1_psvpd")
+script = ExtResource("2_muir7")
+health = 4
+speed = 10.0
+
+[node name="Node2D" parent="." instance=ExtResource("3_nf2m4")]
