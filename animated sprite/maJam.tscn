@@ -208,7 +208,7 @@ texture = ExtResource("1_xnb8o")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4.30494, 21.9759)
+position = Vector2(45.6323, -1.28514)
 sprite_frames = SubResource("SpriteFrames_88w6e")
 animation = &"Walk"
 autoplay = "idle"
