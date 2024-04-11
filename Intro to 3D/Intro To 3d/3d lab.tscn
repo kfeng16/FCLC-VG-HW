@@ -1,8 +1,37 @@
-[gd_scene format=3 uid="uid://d24tnw2x732h"]
+[gd_scene load_steps=4 format=3 uid="uid://d24tnw2x732h"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_8ef0c"]
+
+[sub_resource type="Environment" id="Environment_ttop5"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_yoeyo"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.137375, -0.990519, 0, 0.990519, 0.137375, 0.0642796, 0.686704, -5.52898)
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, -4.04722e-10, 0, -2.02122e-09, 1, 2.21535, 0.608846, -4.38998)
+
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.987178, -0.159623, 0, 0.159623, 0.987178, -0.93557, 3.64938, 2.60011)
 size = Vector3(13.0872, 13.0496, 1.92335)
+
+[node name="GPUParticlesAttractorVectorField3D" type="GPUParticlesAttractorVectorField3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -4.13146e-10, 0, -9.15632e-10, 1, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="CSGBox3D"]
+process_priority = 3
+process_physics_priority = 3
+environment = SubResource("Environment_ttop5")
+camera_attributes = SubResource("CameraAttributesPractical_yoeyo")
+
+[node name="Camera3D" type="Camera3D" parent="CSGBox3D/WorldEnvironment"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGBox3D/WorldEnvironment/Camera3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0964017, 0.99534, 0, -0.995342, 0.0964015, 8.8627, 4.37211, -0.909388)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 0.0964018, -0.995343, 0, 0.995345, 0.096402, -8.8627, -1.32663, -4.26409)
+script = ExtResource("1_8ef0c")
